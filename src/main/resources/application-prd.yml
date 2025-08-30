@@ -1,15 +1,15 @@
-spring:
-  datasource:
-    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
-    username: ${PGUSER}
-    password: ${PGPASSWORD}
-    driver-class-name: org.postgresql.Driver
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+#    username: ${PGUSER}
+#    password: ${PGPASSWORD}
+#    driver-class-name: org.postgresql.Driver
   jpa:
     show-sql: false
     open-in-view: false
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create
       dialect: org.hibernate.dialect.PostgreSQLDialect
-    properties:
-      hibernate:
-        format_sql: false
+#    properties:
+#      hibernate:
+#        format_sql: false
