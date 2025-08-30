@@ -1,6 +1,5 @@
 package me.dio.api_java_bootcamp2025.domain.repository;
 
-import me.dio.api_java_bootcamp2025.domain.model.Artist;
 import me.dio.api_java_bootcamp2025.domain.model.Artwork;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
