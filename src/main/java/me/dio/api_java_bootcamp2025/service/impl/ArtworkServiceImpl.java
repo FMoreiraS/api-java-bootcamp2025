@@ -21,12 +21,17 @@ public class ArtworkServiceImpl  implements ArtworkService {
         return artworkRepository.findById(id).orElseThrow(NoSuchElementException::new);
     }
 
+//    FUNCIONA!!!!
 //    public Artwork addArtwork(Artwork artworkToAdd) {
-//        if (artworkRepository.existsByNameArtistAndDate(
-//                artworkToAdd.getName(),
-//                artworkToAdd.getArtist(), //.getName(),
-//                artworkToAdd.getCreationDate()
-//        )) {
+//        String artworkName = artworkToAdd.getName();
+////        String artistName = artworkToAdd.getArtist().getName();
+//        String artistName = artworkToAdd.getArtistName();
+////        Date artworkDateOfCreation = artworkToAdd.getCreationDate();
+//        if (artworkRepository.existsByNameAndArtistName(
+//                artworkName,
+//                artistName
+////                artworkDateOfCreation
+//        ) {
 //            throw new IllegalArgumentException("This Artwork already had been added.");
 //        }
 //        return artworkRepository.save(artworkToAdd);
@@ -34,10 +39,10 @@ public class ArtworkServiceImpl  implements ArtworkService {
 
     public Artwork addArtwork(Artwork artworkToAdd) {
         String artworkName = artworkToAdd.getName();
-//        String artistName = artworkToAdd.getArtistName();
-        String artistName = artworkToAdd.getArtist().getName();
+//        String artistName = artworkToAdd.getArtist().getName();
+        String artistName = artworkToAdd.getArtistName();
         Date artworkDateOfCreation = artworkToAdd.getCreationDate();
-        if (artworkRepository.existsByNameAndArtistNameAndCreationDate(
+        if (artworkRepository.existsByArtworkNameAndArtistNameAndCreationDate(
                 artworkName,
                 artistName,
                 artworkDateOfCreation
